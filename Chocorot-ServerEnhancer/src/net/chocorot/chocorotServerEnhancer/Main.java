@@ -5,7 +5,6 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import net.chocorot.chocorotServerEnhancer.Commands.FlyCommand;
-import net.chocorot.chocorotServerEnhancer.Commands.ParkourCheatCommand;
 import net.chocorot.chocorotServerEnhancer.Commands.PingCommand;
 import net.chocorot.chocorotServerEnhancer.Commands.SettingsCommand;
 import net.chocorot.chocorotServerEnhancer.Listener.DisableAchievementListener;
@@ -31,13 +30,11 @@ public class Main extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new FlyOnJoinListener(), this);
 		getServer().getPluginManager().registerEvents(new JoinMessageListener(), this);
 		getServer().getPluginManager().registerEvents(new DisableDeathListener(), this);
-		
 
 		// Commands
 		this.getCommand("cse").setExecutor(new SettingsCommand());
 		this.getCommand("fly").setExecutor(new FlyCommand());
 		this.getCommand("ping").setExecutor(new PingCommand());
-		this.getCommand("pkcheat").setExecutor(new ParkourCheatCommand());
 
 		// Config
 		config.addDefault("disableAchievement", true);
