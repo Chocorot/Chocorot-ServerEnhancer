@@ -6,6 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import net.chocorot.chocorotServerEnhancer.Commands.FlyCommand;
 import net.chocorot.chocorotServerEnhancer.Commands.PingCommand;
+import net.chocorot.chocorotServerEnhancer.Commands.RankCommand;
 import net.chocorot.chocorotServerEnhancer.Commands.SettingsCommand;
 import net.chocorot.chocorotServerEnhancer.Listener.DisableAchievementListener;
 import net.chocorot.chocorotServerEnhancer.Listener.DisableBedListener;
@@ -35,6 +36,7 @@ public class Main extends JavaPlugin {
 		this.getCommand("cse").setExecutor(new SettingsCommand());
 		this.getCommand("fly").setExecutor(new FlyCommand());
 		this.getCommand("ping").setExecutor(new PingCommand());
+		this.getCommand("rank").setExecutor(new RankCommand());
 
 		// Config
 		config.addDefault("disableAchievement", true);

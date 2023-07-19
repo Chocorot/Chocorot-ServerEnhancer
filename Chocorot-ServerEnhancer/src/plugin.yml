@@ -6,15 +6,15 @@ author: Chocorot
 description: A plugin that made for Chocorot Network to enchance the server
 commands:
    cse:
-      description: Main Command
+      description: Main Command.
       permission: chocorot.admin
    
    fly:
-      description: Toggle fly
+      description: Toggle fly.
       permission: chocorot.fly
    ping:
-      description: Display player current ping
+      description: Display player current ping.
       permission: 
-   pkcheat:
-      description: DONT CHEAT
-      permission: op
+   rank:
+      description: Change a player's rank.
+      permission: chocorot.rank
