@@ -20,7 +20,6 @@ public class RankCommand implements CommandExecutor {
 		LuckPerms luckPerms1 = LuckPermsProvider.get();
 		if (args.length > 0) { // Check if the command have more than 1 arguments
 			
-			sender.sendMessage("Test");
 			this.target = Bukkit.getPlayerExact(args[0]);
 			
 			// Check if the target online

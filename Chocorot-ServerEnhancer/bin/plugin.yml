@@ -4,6 +4,7 @@ version: 1.0.0
 api-version: 1.8.8
 author: Chocorot
 description: A plugin that made for Chocorot Network to enchance the server
+depend: [NickAPI]
 commands:
    cse:
       description: Main Command.
@@ -18,3 +19,8 @@ commands:
    rank:
       description: Change a player's rank.
       permission: chocorot.rank
+   nick:
+      description: Change nickname.
+      permission: chocorot.nick
+   chdebug:
+      permission: op

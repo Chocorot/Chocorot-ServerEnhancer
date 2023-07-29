@@ -16,19 +16,15 @@ import net.chocorot.chocorotServerEnhancer.Main;
 
 public class JoinMessageListener implements Listener {
 
+	ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
+
 	@EventHandler(priority = EventPriority.LOWEST)
 	public void onPlayerJoin(PlayerJoinEvent e) {
-		ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
 		Player p = e.getPlayer();
-		String n = p.getName();
-		String prefix = cc(Main.getChat().getPlayerPrefix(p));
+		executorService.schedule(() -> setMessage(p), 100, TimeUnit.MILLISECONDS);
 
-		// Join message format
-		String message = prefix + n + ChatColor.GOLD + " joined the lobby!";
-
-		// Delay and run sendMessage()
-		executorService.schedule(() -> sendMessage(p, message), 100, TimeUnit.MILLISECONDS);
-
+		// Set player's display name for some reason
+		p.setDisplayName(ChatColor.translateAlternateColorCodes('&', Main.getChat().getPlayerPrefix(p) + p.getName()));
 	}
 
 	private void sendMessage(Player p, String message) {
@@ -40,8 +36,14 @@ public class JoinMessageListener implements Listener {
 		}
 	}
 
-	private String cc(String txt) {
-		return ChatColor.translateAlternateColorCodes('&', txt);
+	private void setMessage(Player p) {
+		String name = p.getDisplayName();
+
+		// Join message format
+		String message = name + ChatColor.GOLD + " joined the lobby!";
+
+		// Delay and run sendMessage()
+		executorService.schedule(() -> sendMessage(p, message), 100, TimeUnit.MILLISECONDS);
 	}
 
 }

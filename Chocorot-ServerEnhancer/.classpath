@@ -6,5 +6,9 @@
 	<classpathentry kind="lib" path="D:/User Files/Downloads/Compressed/VaultAPI-1.7.1.zip"/>
 	<classpathentry kind="lib" path="D:/User Files/Downloads/Vault.jar"/>
 	<classpathentry kind="lib" path="D:/User Files/Downloads/LuckPerms-Bukkit-5.4.98.jar"/>
+	<classpathentry kind="lib" path="D:/User Files/Downloads/NickAPI-v6.5.3.jar"/>
+	<classpathentry kind="lib" path="D:/User Files/Downloads/ProtocolLib 4.8.0.jar"/>
+	<classpathentry kind="lib" path="D:/User Files/Downloads/PlaceholderAPI-2.11.3.jar"/>
+	<classpathentry kind="lib" path="D:/User Files/Downloads/TAB.v4.0.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

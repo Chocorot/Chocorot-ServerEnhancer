@@ -31,6 +31,7 @@ public class FlyOnJoinListener implements Listener {
 		if (w.equals("lobby") && p.hasPermission("chocorot.fly")) {
 			// Delay and run setFly()
 			executorService.schedule(() -> setFly(p), 10, TimeUnit.MILLISECONDS);
+			p.setFlying(true);
 		}
 	}
 
